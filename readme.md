@@ -21,10 +21,6 @@
 | GetFromPast24Hour(s)    | /intensity/{from}/pt24h         | Get past 24 hours of datetime         |
 | GetFromRange(s)         | /intensity/{from}/{to}          | Get data between to and from datetime |
 
-Most methods have these variants:
-- Base, Json, Dynamic
-- BaseAsync, JsonAsync, DynamicAsync
-
 
 
 
