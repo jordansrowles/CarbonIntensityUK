@@ -3,7 +3,7 @@
 namespace CarbonIntensityUK.Shared
 {
     [JsonObject("generationmix")]
-    public class GenerationMix
+    public class GenerationData
     {
         [JsonProperty("fuel")]
         public string Fuel { get; set; }
