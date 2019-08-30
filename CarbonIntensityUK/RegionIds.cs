@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UKCarbonIntensity
+namespace CarbonIntensityUK
 {
     public enum Region
     {

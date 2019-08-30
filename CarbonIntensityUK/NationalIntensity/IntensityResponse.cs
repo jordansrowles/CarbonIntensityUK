@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using CarbonIntensityUK.Shared;
+using Newtonsoft.Json;
 
 namespace CarbonIntensityUK
 {

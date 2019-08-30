@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace CarbonIntensityUK
+namespace CarbonIntensityUK.Shared
 {
     /// <summary>
     ///     Represents an intensity schema object
