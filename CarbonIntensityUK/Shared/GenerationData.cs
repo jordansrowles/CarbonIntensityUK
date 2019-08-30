@@ -2,7 +2,6 @@
 
 namespace CarbonIntensityUK.Shared
 {
-    [JsonObject("generationmix")]
     public class GenerationData
     {
         [JsonProperty("fuel")]

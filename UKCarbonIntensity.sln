@@ -5,10 +5,13 @@ VisualStudioVersion = 16.0.28711.60
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1427EC7B-3CED-4CB4-B316-5B0899DF5C0C}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		readme.md = readme.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarbonIntensityUK", "CarbonIntensityUK\CarbonIntensityUK.csproj", "{E2438C16-6BF1-44DA-BDE5-AEA2B364F03C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{3BA2ADD7-BC3B-4292-BB80-539A90BB8DF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +23,10 @@ Global
 		{E2438C16-6BF1-44DA-BDE5-AEA2B364F03C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2438C16-6BF1-44DA-BDE5-AEA2B364F03C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2438C16-6BF1-44DA-BDE5-AEA2B364F03C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BA2ADD7-BC3B-4292-BB80-539A90BB8DF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA2ADD7-BC3B-4292-BB80-539A90BB8DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA2ADD7-BC3B-4292-BB80-539A90BB8DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BA2ADD7-BC3B-4292-BB80-539A90BB8DF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
