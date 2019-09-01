@@ -1,4 +1,5 @@
 ![AppVeyor](https://img.shields.io/appveyor/ci/jordansrowles/carbonintensityuk?style=flat-square)
+![Nuget](https://img.shields.io/nuget/v/carbonintensityuk?style=flat-square)
 
 # UK Carbon Intensity
 .NET wrapper around the British Carbon Intensity API provided by the National Grid. Provides real-time and calculated (+48 hour forecast) of CO2 carbon emissions relating to electricity generation.
