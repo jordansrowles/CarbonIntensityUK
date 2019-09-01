@@ -5,47 +5,24 @@ using System.Threading.Tasks;
 
 namespace CarbonIntensityUK.RegionalIntensity
 {
-    public class Region
-    {
-        [JsonProperty("regionid")]
-        public int Regionid { get; set; }
-
-        [JsonProperty("dnoregion")]
-        public string Dnoregion { get; set; }
-
-        [JsonProperty("shortname")]
-        public string Shortname { get; set; }
-
-        [JsonProperty("postcode")]
-        public string Postcode { get; set; }
-
-        [JsonProperty("intensity")]
-        public Intensity Intensity { get; set; }
-
-        [JsonProperty("generationmix")]
-        public IList<GenerationData> Generationmix { get; set; }
-    }
-
-    [JsonObject("data")]
-    public class RegionalIntensityReponse
-    {
-
-        [JsonProperty("from")]
-        public string From { get; set; }
-
-        [JsonProperty("to")]
-        public string To { get; set; }
-
-        [JsonProperty("regions")]
-        public IList<Region> Regions { get; set; }
-    }
-
     public static class RegionalIntensity
     {
-        public static async Task<List<RegionalIntensityReponse>> Get()
+        public static async Task<List<RegionalFromToIntensityReponse>> Get()
         {
             var json = await ApiClient.QueryAsync("https://api.carbonintensity.org.uk/regional");
-            return ApiClient.AttemptConvert<List<RegionalIntensityReponse>>(json);
+            return ApiClient.AttemptConvert<List<RegionalFromToIntensityReponse>>(json);
+        }
+
+        public static async Task<List<RegionalIdIntensityResponse>> Get(string postcode)
+        {
+            var json = await ApiClient.QueryAsync($"https://api.carbonintensity.org.uk/regional/postcode/{postcode}");
+            return ApiClient.AttemptConvert<List<RegionalIdIntensityResponse>>(json);
+        }
+
+        public static async Task<List<RegionalFromToIntensityReponse>> Get(Country country)
+        {
+            var json = await ApiClient.QueryAsync($"https://api.carbonintensity.org.uk/regional/{country.ToString().ToLower()}");
+            return ApiClient.AttemptConvert<List<RegionalFromToIntensityReponse>>(json);
         }
     }
     
