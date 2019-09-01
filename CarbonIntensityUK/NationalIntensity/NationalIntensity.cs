@@ -49,7 +49,7 @@ namespace CarbonIntensityUK
         /// </summary>
         /// <param name="date">DateTime object</param>
         /// <returns>List of IntensityResponse objects</returns>
-        public static async Task <List<IntensityResponse>> GetByDate(DateTime date)
+        public static async Task <List<IntensityResponse>> Get(DateTime date)
         {
             var json = await ApiClient.QueryAsync($"https://api.carbonintensity.org.uk/intensity/date/{ApiClient.FormatDate(date)}");
             return ApiClient.AttemptConvert<List<IntensityResponse>>(json);
@@ -62,7 +62,7 @@ namespace CarbonIntensityUK
         /// <param name="start">Range start datetime</param>
         /// <param name="end">Range end datetime</param>
         /// <returns>List of IntensityResponse objects</returns>
-        public static async Task<List<IntensityResponse>> GetByDate(DateTime start, DateTime end)
+        public static async Task<List<IntensityResponse>> Get(DateTime start, DateTime end)
         {
             var json = await ApiClient.QueryAsync($"https://api.carbonintensity.org.uk/intensity/date/{ApiClient.FormatDateTime(start)}/{ApiClient.FormatDateTime(end)}");
             return ApiClient.AttemptConvert<List<IntensityResponse>>(json);
@@ -75,7 +75,7 @@ namespace CarbonIntensityUK
         /// <param name="date">DateTime object</param>
         /// <param name="period">Half hour period as integer, 1 - 48</param>
         /// <returns>List of IntensityResponse objects</returns>
-        public static async Task<List<IntensityResponse>> GetByDate(DateTime date, int period)
+        public static async Task<List<IntensityResponse>> Get(DateTime date, int period)
         {
             if (period > 48)
                 throw new ArgumentOutOfRangeException("Argument period should be between 1 and 48.");

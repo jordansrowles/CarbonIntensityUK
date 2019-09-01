@@ -11,8 +11,6 @@
 ---------------------
 
 ## GenerationMix.NationalGeneration
-	- Get(DateTime, DateTime) : Task<List<StatisticResponse>>
-	- Get(DateTime, DateTime, int) : Task<List<StatisticResponse>>
 ## NationalIntensity.NationalIntensity
 ## NationalStatistics.NationalStatistics
 ## RegionalIntensity.RegionalIntensity
