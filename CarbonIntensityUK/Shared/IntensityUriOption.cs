@@ -1,4 +1,4 @@
-﻿namespace CarbonIntensityUK
+﻿namespace CarbonIntensityUK.Shared
 {
     /// <summary>
     ///     Represents forecast options for NationalIntensity.Get(date, option)
