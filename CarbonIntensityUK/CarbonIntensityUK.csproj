@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net472;net48;</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Jordan Rowles</Authors>
+    <Description>.NET wrapper around the National Grid's Carbon Intensity API</Description>
+    <PackageProjectUrl>https://github.com/jordansrowles/carbonintensityuk</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jordansrowles/carbonintensityuk</RepositoryUrl>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
