@@ -37,7 +37,7 @@ namespace CarbonIntensityUK
         ///     api.carbonintensity.org.uk/intensity/date
         /// </summary>
         /// <returns>List of IntensityResponse objects</returns>
-        public static async Task<List<IntensityResponse>> GetByDate()
+        public static async Task<List<IntensityResponse>> GetToday()
         {
             var json = await ApiClient.QueryAsync("https://api.carbonintensity.org.uk/intensity/date");
             return ApiClient.AttemptConvert<List<IntensityResponse>>(json);

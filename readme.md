@@ -8,18 +8,14 @@
 [Carbon Intensity API Endpoint](https://api.carbonintensity.org.uk/)
 
 
-| Method                  | API                             | Description                           |
-|-------------------------|---------------------------------|---------------------------------------|
-| GetCurrent()            | /intensity                      | Get data for current half hour        |
-| GetToday()              | /intensity/date                 | Get data for today                    |
-| GetDate(s)              | /intensity/date/{date}          | Get data for specific day             |
-| GetDate(s,s)            | /intensity/date/{date}/{period} | Get data for specific period in day   |
-| GetFactors()            | /intensity/factors              | Get factors for fuel types            |
-| GetFrom(s)              | /intensity/{from}               | Get from specific datetime            |
-| GetFromFoward24Hour(s)  | /intensity/{from}/fw24h         | Get data 24 hour forecast             |
-| GetFromForward48Hour(s) | /intensity/{from}/fw48h         | Get data 48 hour forecast             |
-| GetFromPast24Hour(s)    | /intensity/{from}/pt24h         | Get past 24 hours of datetime         |
-| GetFromRange(s)         | /intensity/{from}/{to}          | Get data between to and from datetime |
+---------------------
+
+## GenerationMix.NationalGeneration
+	- Get(DateTime, DateTime) : Task<List<StatisticResponse>>
+	- Get(DateTime, DateTime, int) : Task<List<StatisticResponse>>
+## NationalIntensity.NationalIntensity
+## NationalStatistics.NationalStatistics
+## RegionalIntensity.RegionalIntensity
 
 
 
