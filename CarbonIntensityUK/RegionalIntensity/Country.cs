@@ -2,8 +2,8 @@
 {
     public enum Country
     {
-        England = 0,
-        Scotland = 1,
-        Wales = 2
+        England = 15,
+        Scotland = 16,
+        Wales = 17
     }
 }
