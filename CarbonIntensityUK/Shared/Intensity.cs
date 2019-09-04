@@ -13,11 +13,13 @@ namespace CarbonIntensityUK.Shared
         /// </summary>
         [JsonProperty("forecast")]
         public int? Forecast { get; set; }
+
         /// <summary>
         ///     The estimated actual carbon intesity for the half hour in units gCO2/kWh
         /// </summary>
         [JsonProperty("actual")]
         public int? Actual { get; set; }
+
         /// <summary>
         ///     Scale representation between very low, low, moderate, high and very high
         /// </summary>

@@ -13,6 +13,7 @@ namespace CarbonIntensityUK
         ///     DateTime in ISO 8601 format
         /// </summary>
         [JsonProperty("from")]
+
         public string From { get; set; }
         /// <summary>
         ///     DateTime in ISO 8601 format
@@ -26,6 +27,13 @@ namespace CarbonIntensityUK
         [JsonProperty("intensity")]
         public Intensity Intensity { get; set; }
 
+        /// <summary>
+        ///     Pretty formats the object for user display
+        /// </summary>
+        /// <returns>Formatted string</returns>
+        /// <example>
+        ///     2018-01-20T12:00Z - 2018-01-20T12:30Z
+        /// </example>
         public override string ToString()
         {
             return $"{From} - {To}";

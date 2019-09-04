@@ -1,5 +1,8 @@
 ﻿namespace CarbonIntensityUK.RegionalIntensity
 {
+    /// <summary>
+    ///     Represents a country in the UK
+    /// </summary>
     public enum Country
     {
         England = 15,

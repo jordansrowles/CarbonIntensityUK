@@ -1,5 +1,8 @@
 ﻿namespace CarbonIntensityUK.RegionalIntensity
 {
+    /// <summary>
+    ///     List of British regions
+    /// </summary>
     public enum RegionId
     {
         NorthScotland = 1,

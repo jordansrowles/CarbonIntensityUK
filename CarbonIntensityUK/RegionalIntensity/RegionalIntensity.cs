@@ -5,9 +5,13 @@ using CarbonIntensityUK.Shared;
 
 namespace CarbonIntensityUK.RegionalIntensity
 {
+    /// <summary>
+    ///     Represents the Regional Intensity controller of the API, api.carbonintensity.org.uk/regional/
+    /// </summary>
     public static class RegionalIntensity
     {
         /// <summary>
+        ///     Get Carbon Intensity data for current half hour for GB regions
         ///     GET
         ///         /regional
         /// </summary>
@@ -19,6 +23,7 @@ namespace CarbonIntensityUK.RegionalIntensity
         }
 
         /// <summary>
+        ///     Get Carbon Intensity data for current half hour for specified postcode
         ///     GET
         ///         /regional/postcode/{postcode}
         /// </summary>
@@ -31,6 +36,7 @@ namespace CarbonIntensityUK.RegionalIntensity
         }
 
         /// <summary>
+        ///     Get Carbon Intensity data for current half hour for England, Scotland or Wales
         ///     GET
         ///         /regional/england
         ///         /regional/scotland
@@ -45,6 +51,7 @@ namespace CarbonIntensityUK.RegionalIntensity
         }
 
         /// <summary>
+        ///     Get Carbon Intensity data for current half hour for specified region
         ///     GET
         ///         /regional/regionid/{regionid}
         /// </summary>

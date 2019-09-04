@@ -6,13 +6,14 @@ using CarbonIntensityUK.Shared;
 namespace CarbonIntensityUK
 {
     /// <summary>
-    ///     Represents the Intensity controller of the API, api.carbonintensity.org.uk/intensity/
+    ///     Represents the National Intensity controller of the API, api.carbonintensity.org.uk/intensity/
     /// </summary>
     public static class NationalIntensity
     {
         /// <summary>
         ///     Gets carbon intensity data for the current half hour of todays date
-        ///     api.carbonintensity.org.uk/intensity/
+        ///     GET
+        ///         /intensity/
         /// </summary>
         /// <returns>List of IntensityResponse objects</returns>
         public static async Task<List<IntensityResponse>> Get()
@@ -23,7 +24,8 @@ namespace CarbonIntensityUK
 
         /// <summary>
         ///     Gets carbon intensity data for specific fuel types
-        ///     api.carbonintensity.org.uk/intensity/factors
+        ///     GET
+        ///         /intensity/factors
         /// </summary>
         /// <returns>List of Factor objects</returns>
         public static async Task<List<Factors>> Factors()
@@ -34,7 +36,8 @@ namespace CarbonIntensityUK
 
         /// <summary>
         ///     Gets carbon intensity data for today
-        ///     api.carbonintensity.org.uk/intensity/date
+        ///     GET
+        ///         /intensity/date
         /// </summary>
         /// <returns>List of IntensityResponse objects</returns>
         public static async Task<List<IntensityResponse>> GetToday()
@@ -45,7 +48,8 @@ namespace CarbonIntensityUK
 
         /// <summary>
         ///     Gets carbon intensity for a specific date
-        ///     api.carbonintensity.org.uk/intensity/date/{date}
+        ///     GET
+        ///         /intensity/date/{date}
         /// </summary>
         /// <param name="date">DateTime object</param>
         /// <returns>List of IntensityResponse objects</returns>
@@ -57,7 +61,8 @@ namespace CarbonIntensityUK
 
         /// <summary>
         ///     Get carbon intensity for a range between two datetimes
-        ///     api.carbonintensity.org.uk/intensity/{start_date}/{end_date}
+        ///     GET
+        ///         /intensity/{start_date}/{end_date}
         /// </summary>
         /// <param name="start">Range start datetime</param>
         /// <param name="end">Range end datetime</param>
@@ -70,7 +75,8 @@ namespace CarbonIntensityUK
 
         /// <summary>
         ///     Gets carbon intensity for a specific half hour period in a day
-        ///     api.carbonintensity.org.uk/intensity/{date}/{period}
+        ///     GET
+        ///         /intensity/{date}/{period}
         /// </summary>
         /// <param name="date">DateTime object</param>
         /// <param name="period">Half hour period as integer, 1 - 48</param>
@@ -85,7 +91,8 @@ namespace CarbonIntensityUK
 
         /// <summary>
         ///     Gets carbon intensity data for a specific datetime
-        ///     api.carbonintensity.org.uk/intensity/{date}
+        ///     GET
+        ///         /intensity/{date}
         /// </summary>
         /// <param name="date">DateTime object</param>
         /// <returns>List of IntensityResponse objects</returns>
@@ -97,12 +104,13 @@ namespace CarbonIntensityUK
 
         /// <summary>
         ///     Gets carbon intensity data with an option. Foward 24, 48 hours, or Back 24 hours
-        ///     api.carbonintensity.org.uk/{date}/fw24h
-        ///     api.carbonintensity.org.uk/{date}/fw48h
-        ///     api.carbonintensity.org.uk/{date}/pt24h
+        ///     GET
+        ///         /intensity/{date}/fw24h
+        ///         /intensity/{date}/fw48h
+        ///         /intensity/{date}/pt24h
         /// </summary>
         /// <param name="date">DateTime object</param>
-        /// <param name="option">Option</param>
+        /// <param name="option">Option for setting the url</param>
         /// <returns>List of IntensityResponse objects</returns>
         public static async Task<List<IntensityResponse>> Get(DateTime date, IntensityUriOption option)
         {
