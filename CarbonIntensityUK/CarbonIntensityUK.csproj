@@ -7,7 +7,8 @@
     <Description>.NET wrapper around the National Grid's Carbon Intensity API</Description>
     <PackageProjectUrl>https://github.com/jordansrowles/carbonintensityuk</PackageProjectUrl>
     <RepositoryUrl>https://github.com/jordansrowles/carbonintensityuk</RepositoryUrl>
-    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <PackageReleaseNotes>Added more XML docs to make use in Visual Studio a little easier</PackageReleaseNotes>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
