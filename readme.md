@@ -8,19 +8,21 @@
 > The Carbon Intensity API uses state-of-the-art Machine Learning and sophisticated power system modelling to forecast the carbon intensity and generation mix 96+ hours ahead for each region in Great Britain. 
 >Our OpenAPI allows consumers and smart devices to schedule and minimise CO2 emissions at a local level
 
-[Carbon Intensity Website](https://carbonintensity.org.uk/)
-
-[Carbon Intensity API docs](https://carbon-intensity.github.io/api-definitions/)
-
-[Carbon Intensity API Endpoint](https://api.carbonintensity.org.uk/)
+[Website](https://carbonintensity.org.uk/)
+ | [Docs](https://carbon-intensity.github.io/api-definitions/)
+ | [Endpoint](https://api.carbonintensity.org.uk/)
 
 
 ---------------------
 
-## GenerationMix.NationalGeneration
-## NationalIntensity.NationalIntensity
-## NationalStatistics.NationalStatistics
-## RegionalIntensity.RegionalIntensity
+### NationalGeneration
+Factors of emissions, represented with a percentage. 
+### NationalIntensity
+Provides emission factors and intensity for GB. 
+### NationalStatistics
+Provides GB intensity statistics. Includes the minimum, maximum, and average co2 levels between two dates, and provides an index to represent that. 
+### RegionalIntensity
+Provides intensity statistics for specific regions of Great Britian, including all regions in a specified country: England, Scotland or Wales. 
 
 
 
