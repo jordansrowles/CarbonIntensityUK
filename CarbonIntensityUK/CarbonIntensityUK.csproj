@@ -1,24 +1,15 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net472;net48;</TargetFrameworks>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Jordan Rowles</Authors>
-    <Description>.NET wrapper around the National Grid's Carbon Intensity API</Description>
-    <PackageProjectUrl>https://github.com/jordansrowles/carbonintensityuk</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/jordansrowles/carbonintensityuk</RepositoryUrl>
-    <PackageReleaseNotes>Added more XML docs to make use in Visual Studio a little easier</PackageReleaseNotes>
-    <Version>1.0.1</Version>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard2.0\CarbonIntensityUK.xml</DocumentationFile>
-    <WarningsAsErrors>NU1605</WarningsAsErrors>
-    <NoWarn>1701;1702;1591</NoWarn>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="System.Text.Json" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers" />
   </ItemGroup>
 
 </Project>

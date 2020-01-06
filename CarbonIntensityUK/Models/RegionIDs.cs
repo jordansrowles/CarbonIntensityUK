@@ -1,9 +1,6 @@
-﻿namespace CarbonIntensityUK.RegionalIntensity
+namespace CarbonIntensityUK.Models
 {
-    /// <summary>
-    ///     List of British regions
-    /// </summary>
-    public enum RegionId
+    public enum RegionIDs
     {
         NorthScotland = 1,
         SouthScotland = 2,
@@ -21,6 +18,6 @@
         SouthEastEngland = 14,
         England = 15,
         Scotland = 16,
-        Wales = 17
+        Wales = 17        
     }
 }
