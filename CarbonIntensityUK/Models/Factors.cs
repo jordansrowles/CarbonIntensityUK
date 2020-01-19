@@ -1,4 +1,4 @@
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace CarbonIntensityUK.Models
 {
@@ -6,21 +6,21 @@ namespace CarbonIntensityUK.Models
     {
         public int? Biomass { get; set; }
         public int? Coal { get; set; }
-        [JsonPropertyName("Dutch Imports")]
+        [JsonProperty("Dutch Imports")]
         public int? DutchImports { get; set; }
-        [JsonPropertyName("French Imports")]
+        [JsonProperty("French Imports")]
         public int? FrenchImports { get; set; }
-        [JsonPropertyName("Irish Imports")]
+        [JsonProperty("Irish Imports")]
         public int? IrishImports { get; set; }
-        [JsonPropertyName("Gas (Combined Cycle)")]
+        [JsonProperty("Gas (Combined Cycle)")]
         public int? GasCombinedCycle { get; set; }
-        [JsonPropertyName("Gas (Open Cycle)")]
+        [JsonProperty("Gas (Open Cycle)")]
         public int? GasOpenCycle { get; set; }
         public int? Hydro { get; set; }
         public int? Nuclear { get; set; }
         public int? Oil { get; set; }
         public int? Other { get; set; }
-        [JsonPropertyName("Pumped Storage")]
+        [JsonProperty("Pumped Storage")]
         public int? PumpedStorage { get; set; }
         public int? Solar { get; set; }
         public int? Wind { get; set; }        

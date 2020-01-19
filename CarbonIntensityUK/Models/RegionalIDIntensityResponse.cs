@@ -1,23 +1,23 @@
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace CarbonIntensityUK.Models
 {
     public class RegionalIDIntensityResponse
     {
-        [JsonPropertyName("regionid")]
+        [JsonProperty("regionid")]
         public int Id { get; set; }
 
-        [JsonPropertyName("dnoregion")]
+        [JsonProperty("dnoregion")]
         public string DnoRegion { get; set; }
 
-        [JsonPropertyName("shortname")]
+        [JsonProperty("shortname")]
         public string Shortname { get; set; }
 
-        [JsonPropertyName("postcode")]
+        [JsonProperty("postcode")]
         public string Postcode { get; set; }
 
-        [JsonPropertyName("data")]
+        [JsonProperty("data")]
         public IList<RegionData> RegionData { get; set; }        
     }
 }

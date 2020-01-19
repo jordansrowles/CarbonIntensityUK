@@ -1,16 +1,16 @@
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace CarbonIntensityUK.Models
 {
     public class IntensityResponse
     {
-        [JsonPropertyName("from")]
+        [JsonProperty("from")]
         public string From { get; set; }
         
-        [JsonPropertyName("to")]
+        [JsonProperty("to")]
         public string To { get; set; }
         
-        [JsonPropertyName("intensity")]
+        [JsonProperty("intensity")]
         public Intensity Intensity { get; set; }
 
         public override string ToString()

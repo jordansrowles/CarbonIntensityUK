@@ -1,16 +1,16 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace CarbonIntensityUK.Models
 {
     public class Intensity
     {
-        [JsonPropertyName("forecast")]
+        [JsonProperty("forecast")]
         public int? Forecast { get; set; }
 
-        [JsonPropertyName("actual")]
+        [JsonProperty("actual")]
         public int? Actual { get; set; }
 
-        [JsonPropertyName("index")]
+        [JsonProperty("index")]
         public string Index { get; set; }
     }
 }

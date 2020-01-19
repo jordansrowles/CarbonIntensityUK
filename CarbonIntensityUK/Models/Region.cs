@@ -1,35 +1,27 @@
 using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace CarbonIntensityUK.Models
 {
     public class Region
     {
-        [JsonPropertyName("regionid")]
-        public int RegionId
-        {
-            get => RegionId;
-            set
-            {
-                if (value < 0 || value > 17)
-                    throw new ArgumentOutOfRangeException("RegionId", "Value cannot be negative, nor larger than 17.");
-            }
-        }
+        [JsonProperty("regionid")]
+        public int RegionId { get; set; }
 
-        [JsonPropertyName("dnoregion")]
+        [JsonProperty("dnoregion")]
         public string DnoRegion { get; set; }
 
-        [JsonPropertyName("shortname")]
+        [JsonProperty("shortname")]
         public string Shortname { get; set; }
 
-        [JsonPropertyName("postcode")]
+        [JsonProperty("postcode")]
         public string Postcode { get; set; }
 
-        [JsonPropertyName("intensity")]
+        [JsonProperty("intensity")]
         public Intensity Intensity { get; set; }
 
-        [JsonPropertyName("generationmix")]
+        [JsonProperty("generationmix")]
         public IList<GenerationData> Generationmix { get; set; }        
     }
 }

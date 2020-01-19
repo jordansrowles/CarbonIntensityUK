@@ -11,6 +11,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarbonIntensityUK", "CarbonIntensityUK\CarbonIntensityUK.csproj", "{556C62B2-F3DA-48D1-BE2B-72BB95D079A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{04AAFDC5-9FE0-451C-A262-10FA01734EAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{B4662390-6BB4-47EA-8169-388B6D28BB2D}"
+ProjectSection(SolutionItems) = preProject
+	build-r.sh = build-r.sh
+	build.sh = build.sh
+	deploy.sh = deploy.sh
+	push.sh = push.sh
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarbonIntensityUK.UnitTests", "CarbonIntensityUK.UnitTests\CarbonIntensityUK.UnitTests.csproj", "{928D6DC4-B907-4F67-A868-AEF9D55C6876}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,11 +33,22 @@ Global
 		{556C62B2-F3DA-48D1-BE2B-72BB95D079A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{556C62B2-F3DA-48D1-BE2B-72BB95D079A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{556C62B2-F3DA-48D1-BE2B-72BB95D079A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04AAFDC5-9FE0-451C-A262-10FA01734EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04AAFDC5-9FE0-451C-A262-10FA01734EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04AAFDC5-9FE0-451C-A262-10FA01734EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04AAFDC5-9FE0-451C-A262-10FA01734EAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{928D6DC4-B907-4F67-A868-AEF9D55C6876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{928D6DC4-B907-4F67-A868-AEF9D55C6876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{928D6DC4-B907-4F67-A868-AEF9D55C6876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{928D6DC4-B907-4F67-A868-AEF9D55C6876}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9B29FDE2-FBF2-4AFB-80DB-F1CECE137245}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B4662390-6BB4-47EA-8169-388B6D28BB2D} = {1427EC7B-3CED-4CB4-B316-5B0899DF5C0C}
 	EndGlobalSection
 EndGlobal
