@@ -15,13 +15,16 @@
 
 ---------------------
 
-### NationalGeneration
-Factors of emissions, represented with a percentage. 
-### NationalIntensity
-Provides emission factors and intensity for GB. 
-### NationalStatistics
-Provides GB intensity statistics. Includes the minimum, maximum, and average co2 levels between two dates, and provides an index to represent that. 
-### RegionalIntensity
-Provides intensity statistics for specific regions of Great Britian, including all regions in a specified country: England, Scotland or Wales. 
+### Carbon Intensity
 
+Most of the __national__ intensity data is returned in "Intensity" objects (CarbonIntensityUK.Models.Intensity). Containing to/from timestamps, the forecasted and actual intensity measured in gCO2/kWh. It also has a string for an index (very low, low, moderate, high, very high).
 
+__Regional__ data is formatted a little differently. They come in either of two responses: 'Regional From-To' or 'Regional ID'. Regional ID is a response received when you request intensity data about using a location query, either a postcode, region or country. It contains some metadata about the region in the root, contains an intensity object, and a generation mix object for that region. 
+
+### Generation Mix (Energy Mix)
+
+Fancy way of saying how much of our energy comes from which generation source, or where it is imported from. Data is returned as "GenerationMix" objects (CarbonIntensityUK.Models.GenerationMix). The returned object has a to/from timestamp, and a GenerationMix object, containing a list of the fuel type and the percentage of energy that is generated for that given datetime range.
+
+### Statistics
+
+The Statistics objects return general nonspecialised data about the datetime range. An Intensity object is returned with the values for forecast, actual and index.
