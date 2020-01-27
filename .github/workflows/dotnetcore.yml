@@ -13,8 +13,15 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.100
+        source-url: https://nuget.pkg.github.com/jordansrowles/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.AccessCode}}
     - name: Build with dotnet
       run: dotnet build --configuration Release
     - name: Run Unit Tests
       run: dotnet test
       working-directory: ./CarbonIntensityUK.UnitTests/
+    - name: Create a package
+      run: dotnet pack --configuration Release CarbonIntensityUK
+    - name: Publish the package to Github
+      run: dotnet nuget push CarbonIntensityUK/bin/Release/*.nupkg
