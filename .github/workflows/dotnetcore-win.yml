@@ -1,0 +1,27 @@
+name: .NET Core on Windows
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    name: Update NuGet
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@master
+      
+      - name: Build solution
+        run: dotnet build -- Configuration Release
+        
+      - name: Pack solution
+        run: dotnet pack -c Release
+        
+      - name: Install NuGet client
+        uses: warrenbuckley/Setup-Nuget@v1
+
+      - name: Add private GitHub registry to NuGet
+        run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/jordansrowles/index.json -Username jordansrowles -Password ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push generated package to GitHub registry
+        run: nuget push .\CarbonIntensityUK\bin\Release\*.nupkg -Source "GPR" -SkipDuplicate
