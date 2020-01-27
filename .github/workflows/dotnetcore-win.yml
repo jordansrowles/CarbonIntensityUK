@@ -15,7 +15,7 @@ jobs:
         run: dotnet build -- Configuration Release
         
       - name: Pack solution
-        run: dotnet pack -c Release
+        run: dotnet pack --configuration Release CarbonIntensityUK
         
       - name: Install NuGet client
         uses: warrenbuckley/Setup-Nuget@v1
