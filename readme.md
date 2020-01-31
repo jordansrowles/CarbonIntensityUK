@@ -1,3 +1,4 @@
+![.NET Core](https://github.com/jordansrowles/CarbonIntensityUK/workflows/.NET%20Core/badge.svg)
 ![AppVeyor](https://img.shields.io/appveyor/ci/jordansrowles/carbonintensityuk?style=flat-square)
 [![NuGet (CarbonIntensityUK)](https://img.shields.io/nuget/v/carbonintensityuk.svg?style=flat-square)](https://www.nuget.org/packages/CarbonIntensityUK/)
 
