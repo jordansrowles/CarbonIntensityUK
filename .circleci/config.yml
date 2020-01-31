@@ -1,29 +1,19 @@
-version: 2.1
-
-orbs:
-  win: circleci/windows@1.0.0
-
+version: 2
 jobs:
   build:
     docker:
-      - image: mcr.microsoft.com/dotnet/core/sdk:3.1
-    environment:
-      DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX: 2
+      - image: jetcipher/circleci-dotnet-core:3.0
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - dotnet-packages-v1-{{ checksum "CarbonIntensityUK/CarbonIntensityUK.csproj" }}
+      - setup_remote_docker: 
+         docker_layer_caching: false
       - run:
-          name: "Install project dependencies"
-          command: dotnet.exe restore
-      - save_cache:
-          paths:
-            - C:\Users\circleci\.nuget\packages
-          key: dotnet-packages-v1-{{ checksum "CarbonIntensityUK/CarbonIntensityUK.csproj" }}
+          name: Restore
+          command: dotnet restore
       - run:
-          name: "Run Build step"
-          command: dotnet build --configuration Release
+          name: Build
+          command: dotnet build -c Release "CarbonIntensityUK"
       - run:
-          name: "Test the executable"
-          command: dotnet test "CarbonIntensityUK.UnitTests"
+          name: Running Tests
+          command: dotnet test
+          working_directory: "CarbonIntensityUK.UnitTests"
