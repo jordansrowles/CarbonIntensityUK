@@ -5,14 +5,15 @@ orbs:
 
 jobs:
   build:
-    executor:
-      name: win/vs2019
-      shell: powershell.exe
+    docker:
+      - image: mcr.microsoft.com/dotnet/core/sdk:3.1
+    environment:
+      DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX: 2
     steps:
       - checkout
       - restore_cache:
           keys:
-            - dotnet-packages-v1-{{ checksum "arbonIntensityUK/CarbonIntensityUK.csproj" }}
+            - dotnet-packages-v1-{{ checksum "CarbonIntensityUK/CarbonIntensityUK.csproj" }}
       - run:
           name: "Install project dependencies"
           command: dotnet.exe restore
