@@ -29,3 +29,6 @@ Fancy way of saying how much of our energy comes from which generation source, o
 ### Statistics
 
 The Statistics objects return general nonspecialised data about the datetime range. An Intensity object is returned with the values for forecast, actual and index.
+
+---------------------
+It doesn't effect the project, but JetBrains gave me an Open Source license to use their software to develop this library. Many thanks to them, and for giving me a home away from home (Rider IDE on Linux) 
