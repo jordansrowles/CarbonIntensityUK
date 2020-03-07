@@ -84,7 +84,7 @@ namespace CarbonIntensityUK.UnitTests
                 var result = await Record.ExceptionAsync((async () =>
                     await Controllers.NationalIntensity.Get(
                         new DateTime(2019, 01, 01),
-                        IntensityURIOption.pt24h)));
+                        IntensityUriOption.Pt24H)));
                 Assert.Null(result);
             }
             
@@ -94,7 +94,7 @@ namespace CarbonIntensityUK.UnitTests
                 var result = await Record.ExceptionAsync((async () =>
                     await Controllers.NationalIntensity.Get(
                         new DateTime(2019, 01, 01),
-                        IntensityURIOption.fw24h)));
+                        IntensityUriOption.Fw24H)));
                 Assert.Null(result);
             }
             
@@ -104,7 +104,7 @@ namespace CarbonIntensityUK.UnitTests
                 var result = await Record.ExceptionAsync((async () =>
                     await Controllers.NationalIntensity.Get(
                         new DateTime(2019, 01, 01),
-                        IntensityURIOption.fw48h)));
+                        IntensityUriOption.Fw48H)));
                 Assert.Null(result);
             }
         }
@@ -212,7 +212,7 @@ namespace CarbonIntensityUK.UnitTests
             {
                 var result = await Record.ExceptionAsync((async () =>
                     await Controllers.RegionalIntensity.Get(
-                        IntensityURIOption.pt24h,
+                        IntensityUriOption.Pt24H,
                         new DateTime(2019, 01, 01))));
                 Assert.Null(result);
             }
@@ -222,7 +222,7 @@ namespace CarbonIntensityUK.UnitTests
             {
                 var result = await Record.ExceptionAsync((async () =>
                     await Controllers.RegionalIntensity.Get(
-                        IntensityURIOption.pt24h,
+                        IntensityUriOption.Pt24H,
                         new DateTime(2019, 01, 01),
                         "MK1")));
                 Assert.Null(result);
@@ -233,7 +233,7 @@ namespace CarbonIntensityUK.UnitTests
             {
                 var result = await Record.ExceptionAsync((async () =>
                     await Controllers.RegionalIntensity.Get(
-                        IntensityURIOption.pt24h,
+                        IntensityUriOption.Pt24H,
                         new DateTime(2019, 01, 01),
                         RegionIDs.EastEngland)));
                 Assert.Null(result);

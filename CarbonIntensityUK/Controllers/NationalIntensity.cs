@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CarbonIntensityUK.Models;
-using Microsoft.VisualBasic;
 
 namespace CarbonIntensityUK.Controllers
 {
@@ -81,9 +80,9 @@ namespace CarbonIntensityUK.Controllers
         ///     Gets carbon intensity forecast
         /// </summary>
         /// <param name="date">Specific datetime in ISO 8601 format</param>
-        /// <param name="option">Past 24 hours, Forward 24 hours, or Forward 48 hours as an <see cref="CarbonIntensityUK.Models.IntensityURIOption"><c>IntensityURIOption</c></see></param>
+        /// <param name="option">Past 24 hours, Forward 24 hours, or Forward 48 hours as an <see cref="IntensityUriOption"><c>IntensityURIOption</c></see></param>
         /// <returns>List of <see cref="CarbonIntensityUK.Models.IntensityResponse"><c>IntensityResponse</c></see> objects</returns>
-        public static async Task<List<IntensityResponse>> Get(DateTime date, IntensityURIOption option) =>
+        public static async Task<List<IntensityResponse>> Get(DateTime date, IntensityUriOption option) =>
             await ApiClient.GetAsObjects<List<IntensityResponse>>(
                 $"{_base}{date.ToISO8601()}/{option.ToString()}");
     }

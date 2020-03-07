@@ -4,21 +4,21 @@ namespace CarbonIntensityUK.Models
     ///     Used to determine the forecast type.
     ///     Previous 24 hours, or forecast 24 / 48 hour
     /// </summary>
-    public enum IntensityURIOption
+    public enum IntensityUriOption
     {
         /// <summary>
         ///     Forward 24 hours
         /// </summary>
-        fw24h,
+        Fw24H,
         
         /// <summary>
         ///     Forward 48 hours
         /// </summary>
-        fw48h,
+        Fw48H,
         
         /// <summary>
         ///     Past 24 hours
         /// </summary>
-        pt24h
+        Pt24H
     }
 }
