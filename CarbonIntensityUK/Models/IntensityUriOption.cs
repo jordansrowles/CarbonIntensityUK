@@ -9,16 +9,16 @@ namespace CarbonIntensityUK.Models
         /// <summary>
         ///     Forward 24 hours
         /// </summary>
-        Fw24H,
+        fw24h,
         
         /// <summary>
         ///     Forward 48 hours
         /// </summary>
-        Fw48H,
+        fw48h,
         
         /// <summary>
         ///     Past 24 hours
         /// </summary>
-        Pt24H
+        pt24h
     }
 }
