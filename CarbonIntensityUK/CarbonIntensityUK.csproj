@@ -8,8 +8,8 @@
     <Description>.NET wrapper around the National Grid's Carbon Intensity API</Description>
     <PackageProjectUrl>https://github.com/jordansrowles/carbonintensityuk</PackageProjectUrl>
     <RepositoryUrl>https://github.com/jordansrowles/carbonintensityuk</RepositoryUrl>
-    <PackageReleaseNotes>Completely changed the library. Moved all the logic from individual namespaces to a common Controllers namespace. Changed a couple things in ApiClient. Added unit tests, which all pass.</PackageReleaseNotes>
-    <Version>2.0.0</Version>
+    <PackageReleaseNotes>Updated package with XML comments</PackageReleaseNotes>
+    <Version>2.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
