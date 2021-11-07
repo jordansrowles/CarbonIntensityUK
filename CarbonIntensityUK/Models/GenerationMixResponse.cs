@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
@@ -7,10 +8,10 @@ namespace CarbonIntensityUK.Models
     public class GenerationMixResponse
     {
         [JsonProperty("from")]
-        public string From { get; set; }
+        public DateTimeOffset From { get; set; }
 
         [JsonProperty("to")]
-        public string To { get; set; }
+        public DateTimeOffset To { get; set; }
 
         [JsonProperty("generationmix")]
         public IList<GenerationData> GenerationMix { get; set; }
