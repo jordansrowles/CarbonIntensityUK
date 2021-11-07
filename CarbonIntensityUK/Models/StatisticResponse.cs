@@ -1,14 +1,15 @@
 using Newtonsoft.Json;
+using System;
 
 namespace CarbonIntensityUK.Models
 {
     public class StatisticResponse
     {
         [JsonProperty("from")]
-        public string From { get; set; }
+        public DateTimeOffset From { get; set; }
 
         [JsonProperty("to")]
-        public string To { get; set; }
+        public DateTimeOffset To { get; set; }
 
         [JsonProperty("intensity")]
         public Statistic Intensity { get; set; }        
