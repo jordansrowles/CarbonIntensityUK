@@ -8,8 +8,8 @@
     <Description>.NET wrapper around the National Grid's Carbon Intensity API</Description>
     <PackageProjectUrl>https://github.com/jordansrowles/carbonintensityuk</PackageProjectUrl>
     <RepositoryUrl>https://github.com/jordansrowles/carbonintensityuk</RepositoryUrl>
-    <PackageReleaseNotes>Updated package with XML comments</PackageReleaseNotes>
-    <Version>2.1.0</Version>
+    <PackageReleaseNotes>Updated models to use DateTimeOffset</PackageReleaseNotes>
+    <Version>2.1.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
