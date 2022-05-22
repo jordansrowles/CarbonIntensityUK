@@ -1,5 +1,5 @@
 using System;
-using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -22,8 +22,8 @@ namespace CarbonIntensityUK
         /// <returns>Json string</returns>
         static async Task<string> AsyncQuery(string uri)
         {
-            using var client = new WebClient();
-            return await client.DownloadStringTaskAsync(uri);
+            using var client = new HttpClient();
+            return await client.GetStringAsync(uri);
         }
 
         /// <summary>
