@@ -1,21 +1,21 @@
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace CarbonIntensityUK.Models
 {
     public class RegionData
     {
-        [JsonProperty("from")]
+        [JsonPropertyName("from")]
         public DateTimeOffset From { get; set; }
 
-        [JsonProperty("to")]
+        [JsonPropertyName("to")]
         public DateTimeOffset To { get; set; }
 
-        [JsonProperty("intensity")]
+        [JsonPropertyName("intensity")]
         public Intensity Intensity { get; set; }
 
-        [JsonProperty("generationmix")]
+        [JsonPropertyName("generationmix")]
         public IList<GenerationData> GenerationMix { get; set; }        
     }
 }

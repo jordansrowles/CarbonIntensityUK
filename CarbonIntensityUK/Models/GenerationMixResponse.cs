@@ -1,19 +1,19 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace CarbonIntensityUK.Models
 {
     public class GenerationMixResponse
     {
-        [JsonProperty("from")]
+        [JsonPropertyName("from")]
         public DateTimeOffset From { get; set; }
 
-        [JsonProperty("to")]
+        [JsonPropertyName("to")]
         public DateTimeOffset To { get; set; }
 
-        [JsonProperty("generationmix")]
+        [JsonPropertyName("generationmix")]
         public IList<GenerationData> GenerationMix { get; set; }
 
         public override string ToString()

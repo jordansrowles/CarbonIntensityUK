@@ -1,13 +1,13 @@
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace CarbonIntensityUK.Models
 {
     public class GenerationData
     {
-        [JsonProperty("fuel")]
+        [JsonPropertyName("fuel")]
         public string Fuel { get; set; }
         
-        [JsonProperty("perc")]
+        [JsonPropertyName("perc")]
         public double? Percentage { get; set; }
     }
 }

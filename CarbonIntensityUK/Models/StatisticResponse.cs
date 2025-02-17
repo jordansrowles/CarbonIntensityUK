@@ -1,17 +1,17 @@
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 using System;
 
 namespace CarbonIntensityUK.Models
 {
     public class StatisticResponse
     {
-        [JsonProperty("from")]
+        [JsonPropertyName("from")]
         public DateTimeOffset From { get; set; }
 
-        [JsonProperty("to")]
+        [JsonPropertyName("to")]
         public DateTimeOffset To { get; set; }
 
-        [JsonProperty("intensity")]
+        [JsonPropertyName("intensity")]
         public Statistic Intensity { get; set; }        
     }
 }

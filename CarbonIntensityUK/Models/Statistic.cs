@@ -1,19 +1,19 @@
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace CarbonIntensityUK.Models
 {
     public class Statistic
     {
-        [JsonProperty("max")]
+        [JsonPropertyName("max")]
         public int? Max { get; set; }
 
-        [JsonProperty("average")]
+        [JsonPropertyName("average")]
         public int? Average { get; set; }
 
-        [JsonProperty("min")]
+        [JsonPropertyName("min")]
         public int? Min { get; set; }
 
-        [JsonProperty("index")]
+        [JsonPropertyName("index")]
         public string Index { get; set; }
 
         public override string ToString() => $"{Index} ({Min}, {Max}. {Average})";

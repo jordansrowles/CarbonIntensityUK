@@ -1,8 +1,9 @@
 using System;
 using System.Net.Http;
+using System.Text.Json;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+//using System.Text.Json.Serialization;
+//using Newtonsoft.Json.Linq;
 
 namespace CarbonIntensityUK 
 {
@@ -35,8 +36,10 @@ namespace CarbonIntensityUK
         /// <returns>A new object of type T</returns>
         public static async Task<T> GetAsObjects<T>(string uri, string rootElement = "data")
         {
-            JObject response = JObject.Parse(await AsyncQuery(uri));
-            return JsonConvert.DeserializeObject<T>(response[rootElement].ToString());
+            string jsonString = await AsyncQuery(uri);
+            using var document = JsonDocument.Parse(jsonString);
+            JsonElement root = document.RootElement.GetProperty(rootElement);
+            return JsonSerializer.Deserialize<T>(root.ToString());
         }
     }
 }

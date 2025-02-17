@@ -1,17 +1,17 @@
-using Newtonsoft.Json;
 using System;
+using System.Text.Json.Serialization;
 
 namespace CarbonIntensityUK.Models
 {
     public class IntensityResponse
     {
-        [JsonProperty("from")]
+        [JsonPropertyName("from")]
         public DateTimeOffset From { get; set; }
         
-        [JsonProperty("to")]
+        [JsonPropertyName("to")]
         public DateTimeOffset To { get; set; }
         
-        [JsonProperty("intensity")]
+        [JsonPropertyName("intensity")]
         public Intensity Intensity { get; set; }
 
         public override string ToString()
