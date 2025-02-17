@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CarbonIntensityUK.Models;
+using CarbonIntensityUK.Models.ValueTypes;
 
 namespace CarbonIntensityUK.Controllers
 {
@@ -13,11 +14,19 @@ namespace CarbonIntensityUK.Controllers
         static readonly string _base = "https://api.carbonintensity.org.uk/generation/";
 
         /// <summary>
-        ///     Gets the current generation mix
+        ///     Gets the current generation mix as a class
         /// </summary>
         /// <returns>List of <see cref="CarbonIntensityUK.Models.GenerationMixResponse"><c>GenerationMixResponse</c></see> objects</returns>
         public static async Task<GenerationMixResponse> Get() =>
             await ApiClient.GetAsObjects<GenerationMixResponse>(
+                $"{_base}");
+
+        /// <summary>
+        ///     Gets the current generation mix as a record struct
+        /// </summary>
+        /// <returns>List of <see cref="CarbonIntensityUK.Models.ValueTypes.GenerationMixResponseValue"><c>GenerationMixResponseValue</c></see> objects</returns>
+        public static async Task<GenerationMixResponseValue> GetAsValue() =>
+            await ApiClient.GetAsObjects<GenerationMixResponseValue>(
                 $"{_base}");
 
         /// <summary>
