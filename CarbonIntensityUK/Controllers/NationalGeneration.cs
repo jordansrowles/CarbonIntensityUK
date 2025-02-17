@@ -47,5 +47,9 @@ namespace CarbonIntensityUK.Controllers
         public static async Task<List<GenerationMixResponse>> Get(DateTime start, DateTime end) =>
             await ApiClient.GetAsObjects<List<GenerationMixResponse>>(
                 $"{_base}{start.ToISO8601()}/{end.ToISO8601()}");
-    }
+
+        public static async Task<List<GenerationMixResponseValue>> GetAsValue(DateTime start, DateTime end) =>
+            await ApiClient.GetAsObjects<List<GenerationMixResponseValue>>(
+                $"{_base}{start.ToISO8601()}/{end.ToISO8601()}");
+            }
 }
