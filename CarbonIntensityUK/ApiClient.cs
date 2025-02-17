@@ -34,7 +34,7 @@ namespace CarbonIntensityUK
         /// <param name="rootElement">The root element name</param>
         /// <typeparam name="T">Generic type to convert to</typeparam>
         /// <returns>A new object of type T</returns>
-        public static async Task<T> GetAsObjects<T>(string uri, string rootElement = "data")
+        internal static async Task<T> GetAsObjects<T>(string uri, string rootElement = "data")
         {
             string jsonString = await AsyncQuery(uri);
             using var document = JsonDocument.Parse(jsonString);
